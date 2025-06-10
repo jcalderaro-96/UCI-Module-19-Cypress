@@ -11,4 +11,5 @@ describe('Quiz Component', () => { // Describe block for the Quiz component test
     cy.contains('Start').should('be.visible'); // Assert that Start button is visible
   });
 });
-// end of file
+
+// end of file .
