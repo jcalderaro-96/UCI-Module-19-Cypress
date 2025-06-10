@@ -1,0 +1,78 @@
+🚀 0-5%:
+✅ Confirm project repo + starter code are unzipped, installed, and .env is set up.
+✅ Confirm Cypress is installed and configured in package.json.
+
+🌱 5-10%:
+✅ Create the cypress/ folder structure (component, e2e, fixtures).
+✅ Verify cypress.config.ts exists or create it if missing.
+
+⚙️ 10-15%:
+✅ Create cypress/component/Quiz.cy.jsx with a simple test skeleton.
+✅ Create cypress/e2e/quiz.cy.js with a simple test skeleton.
+
+📝 15-20%:
+✅ Add a simple passing test in Quiz.cy.jsx.
+✅ Add a simple passing test in quiz.cy.js.
+
+⏸️ 20% CHECKPOINT:
+✅ Pause, commit, push. I’ll give you the title/description.
+
+🧪 20-25%:
+✅ Add more meaningful assertions in the component test (Quiz.cy.jsx).
+
+🧪 25-30%:
+✅ Add more meaningful assertions in the e2e test (quiz.cy.js).
+
+🔍 30-35%:
+✅ Ensure all tests run and pass with npm run test.
+
+🧹 35-40%:
+✅ Review test structure, clean up any issues.
+
+⏸️ 40% CHECKPOINT:
+✅ Pause, commit, push. Title/description from me.
+
+⚡ 40-45%:
+✅ Update README to include test instructions.
+
+🎥 45-50%:
+✅ Record video of tests passing from the command line.
+
+⏳ 50-55%:
+✅ Save video link for README.
+
+🖋️ 55-60%:
+✅ Add video link to README.
+
+⏸️ 60% CHECKPOINT:
+✅ Pause, commit, push.
+
+📚 60-65%:
+✅ Confirm all acceptance criteria are met in the tests.
+
+💡 65-70%:
+✅ Confirm repo structure is clean.
+
+📦 70-75%:
+✅ Double-check for missing files, push final file structure.
+
+🧹 75-80%:
+✅ Polish commits/messages as needed.
+
+⏸️ 80% CHECKPOINT:
+✅ Pause, commit, push.
+
+⚙️ 80-85%:
+✅ Review and final test run.
+
+🧩 85-90%:
+✅ Triple-check README.
+
+🔗 90-95%:
+✅ Check final video, link in README.
+
+📝 95-100%:
+✅ Final commit, push. Submission ready.
+
+⏸️ 100% FINAL:
+✅ Pause. I’ll confirm final commit, push, and close.
