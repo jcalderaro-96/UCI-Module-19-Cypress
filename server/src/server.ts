@@ -16,18 +16,18 @@ const __dirname = path.dirname(__filename);
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+// Serve static files first
+const clientDistPath = path.join(__dirname, '../client/dist');
+app.use(express.static(clientDistPath));
+
+// Mount your API routes *after* static serving
 app.use(routes);
 
-if (process.env.NODE_ENV === 'production') {
-  // Serve static assets correctly
-  const clientDistPath = path.join(__dirname, '../client/dist');
-  app.use(express.static(clientDistPath));
-
-  // For any other route, serve the index.html in dist
-  app.get('*', (_req, res) => {
-    res.sendFile(path.join(clientDistPath, 'index.html'));
-  });
-}
+// Fallback to index.html for client-side routing
+app.get('*', (_req, res) => {
+  res.sendFile(path.join(clientDistPath, 'index.html'));
+});
 
 app.listen(PORT, () => {
   console.log(`API server running on port ${PORT}!`);
