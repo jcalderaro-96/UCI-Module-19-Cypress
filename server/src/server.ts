@@ -1,5 +1,6 @@
 import express from 'express';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 import db from './config/connection.js';
 import routes from './routes/index.js';
@@ -9,15 +10,22 @@ await db();
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+// Fix __dirname in ESM
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(routes);
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/dist')));
+  // Serve static assets correctly
+  const clientDistPath = path.join(__dirname, '../client/dist');
+  app.use(express.static(clientDistPath));
 
-   app.get('*', (_req, res) => {
-    res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+  // For any other route, serve the index.html in dist
+  app.get('*', (_req, res) => {
+    res.sendFile(path.join(clientDistPath, 'index.html'));
   });
 }
 
